@@ -1,0 +1,198 @@
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('./../Poppins-Regular.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('./../Poppins-Bold.ttf'); 
+}
+
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url('./../Montserrat-Bold.ttf'); 
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    background: #9053c7;
+    background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
+    background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
+    background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    font-family: Poppins-Regular;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* width: 600px; */
+}
+
+.login__form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px;
+    border-radius: 5%;
+    width: 680px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.login__group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__title {
+    font-family: Poppins-Bold;
+    font-size: 24px;
+    color: #333333;
+    line-height: 1.2;
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding-bottom: 54px;
+}
+
+.login__input {
+    outline: none;
+	border: none;
+    font-family: Poppins-Medium;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #666666;
+    display: block;
+    width: 100%;
+    background: #e6e6e6;
+    height: 50px;
+    border-radius: 25px;
+    padding: 0 30px 0 68px;
+    margin: 5px;
+}
+
+.login__submit {
+    margin-top: 30px;
+    font-family: Montserrat-Bold;
+    outline: none !important;
+	border: none;
+    background: #57b846;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 25px;
+    padding: 10px 40px;
+    width: 200px;
+    height: 50px;
+    transition: all 0.4s;
+}
+
+.login__submit:hover {
+    cursor: pointer;
+    background-color: #333333;
+}
+
+.login__logo {
+    width: 316px;
+    max-width: 100%;
+}
+
+.input__icon {
+    width: 22px;
+}
+
+.input__subgroup {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+.login__input {
+  font-family: Poppins-Medium;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666666;
+  display: block;
+  width: 200px;
+  background: #e6e6e6;
+  height: 50px;
+  border-radius: 25px;
+  transition: all 0.4s;
+}
+
+.input__icon {
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  opacity: 50%;
+}
+
+.login__input:focus {
+  outline: none;
+  box-shadow: 0 0 30px 25px rgba(105, 105, 82, 0.1);
+}
+
+.input__subgroup:focus-within .input__icon {
+  filter: brightness(0) saturate(100%) sepia(45%) hue-rotate(60deg) saturate(400%);
+}
+
+.input__subgroup {
+  position: relative;
+}
+
+/* Tooltip przeniesiony w bok i w górę */
+.tooltip {
+  position: absolute;
+  left: 400px;
+  top: -40px;
+  background-color: #333;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  max-width: 250px;
+  white-space: normal;
+  word-wrap: break-word;
+  line-height: 1.3;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 3;
+  width: 200px;
+}
+
+/* Pokazywanie */
+.input__subgroup:focus-within .tooltip,
+.input__subgroup:focus-within .tooltip-line {
+  opacity: 1;
+}
+
+/* Czerwona linia łącząca input z tooltipem */
+.tooltip-line {
+  position: absolute;
+  left: 300px; /* Start z okolicy inputu (padding-left + ikona) */
+  top: 30px;   /* Połowa wysokości inputu (50px) */
+  width: 150px;
+  height: 2px;
+  background-color: #333;
+  transform: rotate(-10deg);
+  transform-origin: left center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
