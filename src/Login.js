@@ -13,7 +13,7 @@ const Login = () => {
           </div>
         </div>
         <div className="login__group">
-          <h1 className="login__title">KWT</h1>
+          <h1 className="login__title">TEST</h1>
 
           <div className="input__subgroup" data-validate="Valid email is required: ex@abc.xyz">
             <img className="input__icon" src="./login-avatar.png" alt="" />
