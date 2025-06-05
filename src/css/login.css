@@ -16,13 +16,22 @@
 body {
   height: 100vh;
   width: 100%;
-  background: #9053c7;
-  background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
-  background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
-  background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
-  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  background: #e4a1a1; /* fallback */
+  /* background: -webkit-linear-gradient(-135deg, #f28b82, #b22222);
+  background: -o-linear-gradient(-135deg, #f28b82, #b22222);
+  background: -moz-linear-gradient(-135deg, #f28b82, #b22222);
+  background: linear-gradient(-135deg, #f28b82, #b22222); */
   font-family: Poppins-Regular;
+ 
+  /* TEŻ ŁADNE TŁO NA DOLE!!!!!!!!!!!!! */
+  /* background: radial-gradient(ellipse at center, #343436 0%,#1d1f20 100%);  */
+  background-image: url("/public/bg4.svg");
+  background-size: 500px 500px;
+  background-position: center;
+  background-repeat: repeat;
+  height: 100vh;
 }
+
 
 .login {
   display: flex;
@@ -51,17 +60,18 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .login__title {
-    font-family: Poppins-Bold;
-    font-size: 24px;
-    color: #333333;
-    line-height: 1.2;
-    text-align: center;
-    width: 100%;
-    display: block;
-    padding-bottom: 54px;
+  font-family: Poppins-Bold;
+  font-size: 32px;
+  color: #333333;
+  line-height: 1.2;
+  text-align: center;
+  width: 100%;
+  display: block;
+  padding-bottom: 54px;
 }
 
 .login__input {
@@ -81,18 +91,18 @@ body {
 }
 
 .login__submit {
-    margin-top: 30px;
-    font-family: Montserrat-Bold;
-    outline: none !important;
-	border: none;
-    background: #57b846;
-    color: #fff;
-    text-transform: uppercase;
-    border-radius: 25px;
-    padding: 10px 40px;
-    width: 200px;
-    height: 50px;
-    transition: all 0.4s;
+  margin-top: 30px;
+  font-family: Montserrat-Bold;
+  outline: none !important;
+  border: none;
+  background: #57b846;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 25px;
+  padding: 10px 40px;
+  width: 200px;
+  height: 50px;
+  transition: all 0.4s;
 }
 
 .login__submit:hover {
@@ -157,7 +167,7 @@ body {
 .tooltip {
   position: absolute;
   left: 400px;
-  top: -40px;
+  top: -20px;
   background-color: #333;
   color: #fff;
   padding: 8px 12px;
@@ -180,12 +190,11 @@ body {
   opacity: 1;
 }
 
-/* Czerwona linia łącząca input z tooltipem */
 .tooltip-line {
   position: absolute;
-  left: 300px; /* Start z okolicy inputu (padding-left + ikona) */
-  top: 30px;   /* Połowa wysokości inputu (50px) */
-  width: 150px;
+  left: 335px; 
+  top: 30px;   
+  width: 90px;
   height: 2px;
   background-color: #333;
   transform: rotate(-10deg);
@@ -195,3 +204,6 @@ body {
   z-index: 2;
 }
 
+@media (min-width: 1100px) {
+
+}
